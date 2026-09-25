@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Large-Cohort Remote Design — Module Hub</title>
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app app--hub">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">LC</div>
+      <div>
+        <h1>Large-Cohort Remote Design</h1>
+        <p>Activity &amp; assessment design for ~1 instructor : 124 learners</p>
+      </div>
+    </div>
+    <div class="topbar-meta">Draft hub · v1.3 · copy pass</div>
+  </header>
+
+  <main id="main">
+    <section class="glass hub-intro" aria-labelledby="hub-title">
+      <h2 id="hub-title">Facilitated remote at scale</h2>
+      <p>You’re designing live remote sessions where one instructor faces about 124 learners—often with no teaching assistants. Seven short modules walk you through: spot why classroom plans break, write objectives people can actually do, pick activity patterns that scale, build checks for learning and for grading, redesign multi-role process walkthroughs, then ship a section-level package. You learn first. Then you practice.</p>
+      <div class="hub-progress" aria-label="Series progress">
+        <div class="hub-progress-track"><div class="hub-progress-fill" id="hub-fill" style="width:0%"></div></div>
+        <span class="hub-progress-label" id="hub-label">0 / 7 complete</span>
+      </div>
+    </section>
+
+    <nav class="glass" aria-label="Module list">
+      <ol class="lesson-list" id="lesson-list">
+        <li class="lesson-item" data-module="m1">
+          <a class="lesson-link" href="modules/m1/index.html">
+            <span class="lesson-num">1</span>
+            <span class="lesson-body">
+              <p class="lesson-title">Diagnose scale failure at ~1:124</p>
+              <p class="lesson-meta">Objective 1 · Why classroom plans break · no TAs · time-per-person budget</p>
+            </span>
+            <span class="lesson-time">8–12 min</span>
+            <span class="lesson-status">Start</span>
+          </a>
+        </li>
+        <li class="lesson-item" data-module="m2">
+          <a class="lesson-link" href="modules/m2/index.html">
+            <span class="lesson-num">2</span>
+            <span class="lesson-body">
+              <p class="lesson-title">Align &amp; chunk for application at scale</p>
+              <p class="lesson-meta">Objective 2 · Objectives you can see live · short segments with a real practice beat</p>
+            </span>
+            <span class="lesson-time">8–12 min</span>
+            <span class="lesson-status">Start</span>
+          </a>
+        </li>
+        <li class="lesson-item" data-module="m3">
+          <a class="lesson-link" href="modules/m3/index.html">
+            <span class="lesson-num">3</span>
+            <span class="lesson-body">
+              <p class="lesson-title">Design large-cohort activity patterns</p>
+              <p class="lesson-meta">Objective 3 · Shared docs + peer polls · fishbowl · staged case</p>
+            </span>
+            <span class="lesson-time">12–15 min</span>
+            <span class="lesson-status">Start</span>
+          </a>
+        </li>
+        <li class="lesson-item" data-module="m4">
+          <a class="lesson-link" href="modules/m4/index.html">
+            <span class="lesson-num">4</span>
+            <span class="lesson-body">
+              <p class="lesson-title">Design scalable formative assessment</p>
+              <p class="lesson-meta">Objective 4 · Mid-session checks that don’t require grading 124 people 1:1</p>
+            </span>
+            <span class="lesson-time">10–15 min</span>
+            <span class="lesson-status">Start</span>
+          </a>
+        </li>
+        <li class="lesson-item" data-module="m5">
+          <a class="lesson-link" href="modules/m5/index.html">
+            <span class="lesson-num">5</span>
+            <span class="lesson-body">
+              <p class="lesson-title">Design scalable summative / performance assessment</p>
+              <p class="lesson-meta">Objective 5 · End evidence · peer review with calibration · group + individual · two-tier scoring</p>
+            </span>
+            <span class="lesson-time">10–15 min</span>
+            <span class="lesson-status">Start</span>
+          </a>
+        </li>
+        <li class="lesson-item" data-module="m6">
+          <a class="lesson-link" href="modules/m6/index.html">
+            <span class="lesson-num">6</span>
+            <span class="lesson-body">
+              <p class="lesson-title">Online alternatives to multi-stakeholder process sims</p>
+              <p class="lesson-meta">Objective 6 · Staged sequence instead of 30 live tables · plus one mid-check pointer</p>
+            </span>
+            <span class="lesson-time">12–15 min</span>
+            <span class="lesson-status">Start</span>
+          </a>
+        </li>
+        <li class="lesson-item" data-module="m7">
+          <a class="lesson-link" href="modules/m7/index.html">
+            <span class="lesson-num">7</span>
+            <span class="lesson-body">
+              <p class="lesson-title">Capstone: Activity + formative + summative package</p>
+              <p class="lesson-meta">Objective 7 · One section package · score yourself against the rubric</p>
+            </span>
+            <span class="lesson-time">20–30 min</span>
+            <span class="lesson-status">Start</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <aside class="glass-soft hub-note">
+      <strong style="color:var(--text)">How each module works:</strong> Hook → Teach → Worked example → Practice → Exit.
+      Practice stays locked until you finish Teach and the Worked example. That’s intentional.
+      M1–M2 work on their own. For M3–M6, take them in order if you can. Do the Capstone after M1–M6.
+      Need an alternate format or time? Contact [placeholder].
+    </aside>
+  </main>
+
+  <p class="footer-note">Offline draft · Design Package v1.3 · Founder copy pass · Playtest reject archived at <code>../build-playtest-reject-v12/</code></p>
+</div>
+<script src="assets/js/app.js"></script>
+<script>
+LCApp.initHub({
+  listEl: document.getElementById('lesson-list'),
+  fillEl: document.getElementById('hub-fill'),
+  labelEl: document.getElementById('hub-label'),
+  modules: [
+    {id:'m1'},{id:'m2'},{id:'m3'},{id:'m4'},{id:'m5'},{id:'m6'},{id:'m7'}
+  ]
+});
+</script>
+</body>
+</html>
