@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capstone — Large-Cohort Remote Design</title>
+<link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <a class="back-hub" href="../../index.html">← Module hub</a>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">M7</div>
+      <div>
+        <h1>Large-Cohort Remote Design</h1>
+        <p>Objective 7 · 20–30 min (+ polish on your own time)</p>
+      </div>
+    </div>
+    <div class="topbar-meta"><span id="progress-label">1 / 5</span></div>
+  </header>
+
+  <main id="main">
+    <section class="glass module-header">
+      <p class="eyebrow">M7 · Objective 7 · Section-level capstone</p>
+      <h1>Capstone — Build one large-cohort remote activity + assessment package</h1>
+      <p class="obj">Brief → Planning workspace → Submit → Self-score with evidence quotes → Exit. This is a section package—not the full-year graduation exercise.</p>
+      <div class="module-status">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span id="progress-text">Step 1 of 5</span>
+      </div>
+    </section>
+
+    <nav class="step-nav" id="step-nav" aria-label="Module steps">
+      <button type="button" class="nav-step">1 Brief</button>
+      <button type="button" class="nav-step">2 Workspace</button>
+      <button type="button" class="nav-step">3 Submit</button>
+      <button type="button" class="nav-step">4 Self-score</button>
+      <button type="button" class="nav-step">5 Exit</button>
+    </nav>
+
+    <div id="complete-banner" class="glass complete-banner" hidden>
+      <h3>Capstone complete</h3>
+      <p>Your package and self-score are saved in this browser. Do one revision pass after your first score.</p>
+    </div>
+
+    <!-- S1 Brief -->
+    <section class="screen" id="s1">
+      <div class="glass panel">
+        <h2>Brief + rubric overview</h2>
+        <div class="scenario">
+          <span class="label">Your job</span>
+          <p class="lead" style="margin:0">Picture ~124 people online and one instructor—no teaching assistants (zero-TA). You design the activity, the mid-session check (<strong style="color:var(--text)">formative</strong>—evidence used to adjust teaching), and the end assessment (<strong style="color:var(--text)">summative</strong>—evidence for a grade or pass) for a workplace-generic case. Do not run a live 124-person session in this mini-series. Score the package yourself.</p>
+        </div>
+        <h3>Large-Cohort Design Rubric (0 / 1 / 2)</h3>
+        <ul>
+          <li><strong>Scale executability (zero-TA)</strong> — one instructor can run it with ~100+ people; minutes-per-learner budgeted; no hidden “grade everyone 1:1” collapse.</li>
+          <li><strong>Application demand</strong> — you can see people use the process: commit, negotiate, or produce a process artifact—not “awareness” alone.</li>
+          <li><strong>Assessment design quality</strong> — both a scalable mid-session check <em>and</em> a scalable end assessment are evidenced (one alone ≤ Developing).</li>
+          <li><strong>Interaction-at-scale</strong> — subgrouping, roles, protocols, polls / Peer Instruction, fishbowl, whole-room theme feedback.</li>
+          <li><strong>Directions clarity</strong> — purpose, timing, roles, output, how 100+ participate, help path.</li>
+        </ul>
+        <div class="glass-soft callout callout--criteria">
+          <p class="callout-title">What counts as evidence (not a tick-all wall)</p>
+          <ul>
+            <li>Completed activity plan with an application objective, segments, a named large-cohort pattern, and directions</li>
+            <li>Formative (mid-session) plan: evidence, sampling/auto/peer, minutes-per-learner, instructor action</li>
+            <li>Summative (end) plan: product, rubric, CPR-like / two-tier / group+individual / sampling</li>
+            <li>Self-score with an evidence quote for each rubric dimension</li>
+            <li>Honesty / integrity affirmation (this module only)</li>
+            <li>Empty template · unreformed breakout+sample · quiz-only for an application objective = fail</li>
+          </ul>
+        </div>
+        <p style="font-size:0.9rem;color:var(--text-dim)">Proposed mastery bar (confirm with Brandon): ≥1 on all five; ≥2 on Scale executability and Assessment design quality. Optional run-of-show simulation is not required to finish.</p>
+        <div class="actions">
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to planning workspace</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S2 Workspace -->
+    <section class="screen" id="s2">
+      <div class="glass panel">
+        <h2>Planning workspace</h2>
+        <p>Workplace-generic case ideas: change-gate review, approval workflow, quality-incident response, cross-functional project gate.</p>
+
+        <div class="field">
+          <label for="m7case">Case / scenario (workplace-generic)</label>
+          <textarea id="m7case" data-persist="m7case" rows="3" placeholder="Name the process / application case…"></textarea>
+        </div>
+        <div class="field">
+          <label for="m7obj">Measurable application objective (what someone does that you can see)</label>
+          <textarea id="m7obj" data-persist="m7obj" rows="3"></textarea>
+        </div>
+        <div class="field">
+          <label for="m7pat">Large-cohort scale pattern (one of the three taught patterns preferred; gallery OK if you justify it)</label>
+          <textarea id="m7pat" data-persist="m7pat" rows="3" placeholder="e.g., shared-doc + Peer Instruction; fishbowl; interrupted case…"></textarea>
+        </div>
+        <div class="field">
+          <label for="m7chunks">Timed segments / chunk outline</label>
+          <textarea id="m7chunks" data-persist="m7chunks" rows="4" placeholder="Optional detail — helps Scale executability"></textarea>
+        </div>
+        <div class="field">
+          <label for="m7dir">Participant directions (≥1 segment)</label>
+          <textarea id="m7dir" data-persist="m7dir" rows="4"></textarea>
+        </div>
+        <div class="field">
+          <label for="m7form">Scalable formative (mid-session) plan</label>
+          <textarea id="m7form" data-persist="m7form" rows="5" placeholder="Evidence, method, sampling/timebox, instructor action, minutes-per-learner…"></textarea>
+        </div>
+        <div class="field">
+          <label for="m7sum">Scalable summative / performance (end) plan</label>
+          <textarea id="m7sum" data-persist="m7sum" rows="5" placeholder="Product, criteria, CPR-like / two-tier / group+individual, tool contingency…"></textarea>
+        </div>
+        <div class="field">
+          <label for="m7ros">Optional — run-of-show / facilitation moves (not required)</label>
+          <textarea id="m7ros" data-persist="m7ros" rows="4" placeholder="Minute marks + ≥3 critical instructor moves…"></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to submit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S3 Submit -->
+    <section class="screen" id="s3">
+      <div class="glass panel">
+        <h2>Submit check</h2>
+        <div class="glass-soft callout callout--warn">
+          <p class="callout-title">You cannot proceed if</p>
+          <p>Empty template · unreformed breakout+sample with no scale redesign · quiz-only when the objective is process/application.</p>
+        </div>
+        <p>Fill the required workspace fields, then affirm integrity for this capstone evidence.</p>
+        <label class="checkbox-row">
+          <input type="checkbox" id="m7gate" data-persist-check="m7gate">
+          <span><strong style="color:var(--text)">Honesty / integrity affirmation:</strong> I affirm this package is my own design for a workplace-generic process/application case at ~1 instructor : 124 learners with zero TA help. It is not an empty template, an unreformed classroom pattern, or quiz-only evidence for an application objective.</span>
+        </label>
+        <div id="m7-gate-msg" class="gate-msg" hidden role="alert"></div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-gate-next="m7-submit">Continue to self-score</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S4 Self-score -->
+    <section class="screen" id="s4">
+      <div class="glass panel">
+        <h2>Self-score with evidence quotes</h2>
+        <p>Score each dimension 0 / 1 / 2 and quote a specific plan element as evidence. This is not a checkbox wall.</p>
+
+        <div class="glass-soft rubric-dim">
+          <h3>Scale executability (zero-TA)</h3>
+          <p class="dim-help">0 Missing · 1 Developing · 2 Proficient (one instructor, minutes-per-learner, no 1:1 collapse)</p>
+          <div class="radio-row" role="radiogroup" aria-label="Scale executability score">
+            <label><input type="radio" name="r_scale" value="0" data-persist-radio> 0</label>
+            <label><input type="radio" name="r_scale" value="1" data-persist-radio> 1</label>
+            <label><input type="radio" name="r_scale" value="2" data-persist-radio> 2</label>
+          </div>
+          <div class="field" style="margin-top:0.75rem;margin-bottom:0">
+            <label for="e_scale">Evidence quote</label>
+            <textarea id="e_scale" data-persist="e_scale" rows="2" placeholder="Point to a specific plan element…"></textarea>
+          </div>
+        </div>
+
+        <div class="glass-soft rubric-dim">
+          <h3>Application demand</h3>
+          <p class="dim-help">Learners commit, negotiate, or produce a process artifact—not awareness alone</p>
+          <div class="radio-row" role="radiogroup" aria-label="Application demand score">
+            <label><input type="radio" name="r_app" value="0" data-persist-radio> 0</label>
+            <label><input type="radio" name="r_app" value="1" data-persist-radio> 1</label>
+            <label><input type="radio" name="r_app" value="2" data-persist-radio> 2</label>
+          </div>
+          <div class="field" style="margin-top:0.75rem;margin-bottom:0">
+            <label for="e_app">Evidence quote</label>
+            <textarea id="e_app" data-persist="e_app" rows="2"></textarea>
+          </div>
+        </div>
+
+        <div class="glass-soft rubric-dim">
+          <h3>Assessment design quality</h3>
+          <p class="dim-help">Proficient (2) requires <em>both</em> scalable formative (mid-session) and scalable summative (end) evidenced</p>
+          <div class="radio-row" role="radiogroup" aria-label="Assessment design quality score">
+            <label><input type="radio" name="r_assess" value="0" data-persist-radio> 0</label>
+            <label><input type="radio" name="r_assess" value="1" data-persist-radio> 1</label>
+            <label><input type="radio" name="r_assess" value="2" data-persist-radio> 2</label>
+          </div>
+          <div class="field" style="margin-top:0.75rem;margin-bottom:0">
+            <label for="e_assess">Evidence quote</label>
+            <textarea id="e_assess" data-persist="e_assess" rows="2"></textarea>
+          </div>
+        </div>
+
+        <div class="glass-soft rubric-dim">
+          <h3>Interaction-at-scale</h3>
+          <p class="dim-help">Deliberate learner↔content, learner↔instructor, and learner↔learner moves designed for a large cohort</p>
+          <div class="radio-row" role="radiogroup" aria-label="Interaction-at-scale score">
+            <label><input type="radio" name="r_int" value="0" data-persist-radio> 0</label>
+            <label><input type="radio" name="r_int" value="1" data-persist-radio> 1</label>
+            <label><input type="radio" name="r_int" value="2" data-persist-radio> 2</label>
+          </div>
+          <div class="field" style="margin-top:0.75rem;margin-bottom:0">
+            <label for="e_int">Evidence quote</label>
+            <textarea id="e_int" data-persist="e_int" rows="2"></textarea>
+          </div>
+        </div>
+
+        <div class="glass-soft rubric-dim">
+          <h3>Directions clarity</h3>
+          <p class="dim-help">Purpose, timing, roles, output, participation-at-scale, help path</p>
+          <div class="radio-row" role="radiogroup" aria-label="Directions clarity score">
+            <label><input type="radio" name="r_dir" value="0" data-persist-radio> 0</label>
+            <label><input type="radio" name="r_dir" value="1" data-persist-radio> 1</label>
+            <label><input type="radio" name="r_dir" value="2" data-persist-radio> 2</label>
+          </div>
+          <div class="field" style="margin-top:0.75rem;margin-bottom:0">
+            <label for="e_dir">Evidence quote</label>
+            <textarea id="e_dir" data-persist="e_dir" rows="2"></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to exit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S5 Exit -->
+    <section class="screen" id="s5">
+      <div class="glass panel">
+        <h2>Exit</h2>
+        <p class="lead">Mini-series (section-level) is complete for the v1.3 spine when you mark complete below.</p>
+        <p>Do one revision cycle after your first self-score. The course graduation exercise is a host-course / later layer—not built here.</p>
+        <div id="m7-complete-msg" class="gate-msg" hidden role="alert"></div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-complete-module>Mark capstone complete</button>
+          <a class="btn" href="../../index.html">Back to hub</a>
+        </div>
+        <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-dim)">Complete unlocks when workspace fields, honesty affirmation, five radios, and five evidence quotes are filled. Optional run-of-show is not required.</p>
+      </div>
+    </section>
+  </main>
+  <p class="footer-note">Need an alternate format or time? Contact [placeholder]. · Design Package v1.3</p>
+</div>
+<script src="../../assets/js/app.js"></script>
+<script>
+LCApp.initShell({
+  moduleId: 'm7',
+  screens: ['s1','s2','s3','s4','s5'],
+  progressEl: document.getElementById('progress-label'),
+  fillEl: document.getElementById('progress-fill'),
+  stepNav: document.getElementById('step-nav'),
+  onScreen: function(id, idx) {
+    document.getElementById('progress-text').textContent = 'Step ' + (idx+1) + ' of 5';
+  }
+});
+</script>
+</body>
+</html>
