@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design large-cohort activity patterns — Large-Cohort Remote Design</title>
+<link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <a class="back-hub" href="../../index.html">← Module hub</a>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">M3</div>
+      <div>
+        <h1>Large-Cohort Remote Design</h1>
+        <p>Objective 3 · 12–15 min</p>
+      </div>
+    </div>
+    <div class="topbar-meta"><span id="progress-label">1 / 5</span></div>
+  </header>
+  <main id="main">
+    <section class="glass module-header">
+      <p class="eyebrow">M3 · Objective 3</p>
+      <h1>Design large-cohort activity patterns</h1>
+      <p class="obj">Learn first. Then practice. Practice unlocks after you finish Teach and the Worked example.</p>
+      <div class="module-status">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span id="progress-text">Step 1 of 5</span>
+      </div>
+    </section>
+    <nav class="step-nav" id="step-nav" aria-label="Module steps">
+      <button type="button" class="nav-step" data-step="0">1 Hook</button>
+      <button type="button" class="nav-step" data-step="1">2 Teach</button>
+      <button type="button" class="nav-step" data-step="2">3 Model</button>
+      <button type="button" class="nav-step" data-step="3">4 Practice</button>
+      <button type="button" class="nav-step" data-step="4">5 Exit</button>
+    </nav>
+    <div id="hard-gate-alert" class="gate-msg" hidden role="alert"></div>
+    <div id="complete-banner" class="glass complete-banner" hidden>
+      <h3>Module complete</h3>
+      <p>Your practice answers are saved in this browser. Head back to the hub when you’re ready for the next module.</p>
+    </div>
+
+    <section class="screen" id="s1">
+      <div class="glass panel">
+        <h2>Hook</h2>
+        <div class="scenario">
+          <span class="label">Picture this</span>
+          <p class="lead" style="margin:0">Same breakout-plus-sample plan. The instructor asks: “What’s the online version?”</p>
+        </div>
+        <p><strong style="color:var(--text)">Quick prompt (not scored):</strong> Replace the pattern. Don’t shrink the classroom and hope.</p>
+        <div class="field"><label for="m3-hook">Your quick take (optional)</label><textarea id="m3-hook" data-persist="m3-hook" rows="3"></textarea></div>
+        <div class="actions"><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Continue to teach</button></div>
+      </div>
+    </section>
+
+    <section class="screen" id="s2">
+      <div class="glass panel">
+        <h2>Teach — Three patterns that actually scale</h2>
+        <p class="lead">Practice will ask you to pick <strong style="color:var(--text)">one of the three taught patterns</strong>: shared-doc + peer poll (Peer Instruction), fishbowl, or interrupted/staged case. For each: what it is, why it scales, what you do as instructor, when to choose it.</p>
+
+        <div class="teach-section">
+          <h3>A. Shared-doc breakouts + summarizer + Peer Instruction</h3>
+          <p>Teams work in a visible shared doc. One person (the summarizer) posts a short written summary. Then the whole room answers a poll on a process fork—researchers call this <strong style="color:var(--text)">Peer Instruction (PI)</strong>: individual vote → short peer talk if the room is mixed (~30–70% correct) → re-vote; you cold-queue a few roster numbers (call on specific people by list number, not volunteers only). <strong style="color:var(--text)">Why it scales:</strong> everyone contributes in writing; synthesis is whole-cohort; you never promised every-group airtime.</p>
+        </div>
+        <div class="teach-section">
+          <h3>B. Online fishbowl</h3>
+          <p>A small inner panel runs a timed segment while everyone else watches with a job. Outer cohort completes an <em>observation checklist</em> (a tool for participants—not a module “tick every box” list). That’s a <strong style="color:var(--text)">fishbowl</strong>: few people perform; many people observe with structure. <strong style="color:var(--text)">Why it scales:</strong> depth for a few; structured looking for the rest; rotate panels across sessions so more people get inner-ring time over time.</p>
+        </div>
+        <div class="teach-section">
+          <h3>C. Interrupted / staged case</h3>
+          <p>Reveal the case in stages. Individuals commit short answers <em>before</em> group talk. You synthesize themes. <strong style="color:var(--text)">Why it scales:</strong> individual accountability before talk; staged reveals keep pacing without visiting every room.</p>
+        </div>
+        <div class="teach-section">
+          <h3>Subgroup size bands &amp; what still fails</h3>
+          <p>Useful size bands (rough guides): ~8–10 for discussion; ~4–6 for process teams; ~20–30 for larger discussion sets. Pair sizes with roles, protocols, exemplars, and whole-room theme notes. <strong style="color:var(--text)">Still fails:</strong> every-group oral report; you visit all rooms; “same breakouts but fewer groups” if oral report is still how you collect evidence.</p>
+        </div>
+        <div class="teach-section">
+          <h3>Reference gallery (scan-only)</h3>
+          <p>Not practice targets this beat—just know they exist:</p>
+          <div class="gallery-strip">
+            <span class="gallery-chip">Stakeholder jigsaw + recombination</span>
+            <span class="gallery-chip">Documented artifacts + calibrated peer review</span>
+            <span class="gallery-chip">Branching scenario-based learning</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to worked example</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s3">
+      <div class="glass panel">
+        <h2>Worked example — Shared-doc + Peer Instruction redesign</h2>
+        <p><strong style="color:var(--text)">Non-scalable segment:</strong> 15-min breakouts (~30 groups) + random oral sample of 3.</p>
+        <div class="contrast">
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--good">Strong — shared-doc + PI</span>
+            <ul>
+              <li>~4–6 per process team; named summarizer</li>
+              <li>Visible shared doc + 60-sec written summary</li>
+              <li>Peer Instruction: poll → short discuss if the room is mixed → re-poll; cold-call 4 people by roster number</li>
+              <li>Instructor watches for flags only; shares 3 whole-room theme notes (broadcast synthesis)</li>
+            </ul>
+          </div>
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--weak">Weak</span>
+            <p>“Same breakouts but only 10 groups” — still fails if oral report remains the evidence path.</p>
+          </div>
+        </div>
+        <div class="glass-soft callout callout--model">
+          <p class="callout-title">Here’s a strong pattern pick</p>
+          <p>Fishbowl or an interrupted/staged case are fine alternate picks from the three taught patterns. If you only name a gallery item—jigsaw, branching sim, and so on—without one of those three (shared-doc + peer poll / fishbowl / interrupted case), go back and pick from the three taught patterns.</p>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-to-practice data-next>Continue to practice</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s4">
+      <div class="glass panel">
+        <h2>Practice — Redesign with one core pattern</h2>
+        <div id="practice-lock" class="glass-soft callout callout--locked" hidden>
+          <p class="callout-title">Practice locked</p>
+          <p>Finish Teach and the Worked example first. Practice stays blocked until both are done—so you redesign with a named pattern, not a vague “more engagement.”</p>
+        </div>
+        <div class="glass-soft callout callout--criteria">
+          <p class="callout-title">What “good enough” looks like</p>
+          <ul>
+            <li>Non-scalable pattern named · Replacement is one of the three taught patterns: shared-doc + peer poll (PI), fishbowl, interrupted/staged case</li>
+            <li>Subgroup size / roles · Timing + purpose · Instructor bandwidth realistic with zero TA help</li>
+            <li>Directions present · No every-group airtime or visit-every-room</li>
+          </ul>
+        </div>
+        <div class="field">
+          <label for="m3-pat">Core pattern (one of the three taught patterns)</label>
+          <select id="m3-pat" data-persist="m3-pat" data-required-practice>
+            <option value="">Select one…</option>
+            <option value="shared-doc-pi">Shared-doc breakouts + summarizer + Peer Instruction</option>
+            <option value="fishbowl">Online fishbowl</option>
+            <option value="interrupted">Interrupted / staged case</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="m3-redesign">Redesign (timing, purpose, instructor moves, subgroup/roles, directions)</label>
+          <textarea id="m3-redesign" data-persist="m3-redesign" data-required-practice rows="8"></textarea>
+        </div>
+        <div class="field">
+          <label for="m3-debrief">Optional debrief — Name the pattern and one instructor move that avoids every-group airtime</label>
+          <textarea id="m3-debrief" data-persist="m3-debrief" data-debrief rows="2"></textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to exit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s5">
+      <div class="glass panel">
+        <h2>Exit</h2>
+        <p class="lead">You can replace non-scalable classroom moves with large-cohort patterns.</p>
+        <p><strong style="color:var(--text)">Next:</strong> M4 Design scalable formative assessment (mid-session checks that survive 1:124).</p>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-complete-module>Mark module complete</button>
+          <a class="btn" href="../../index.html">Back to hub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <p class="footer-note">Need an alternate format or time? Contact [placeholder]. · Design Package v1.3</p>
+</div>
+<script src="../../assets/js/app.js"></script>
+<script>
+LCApp.initShell({
+  moduleId: 'm3',
+  screens: ['s1','s2','s3','s4','s5'],
+  progressEl: document.getElementById('progress-label'),
+  fillEl: document.getElementById('progress-fill'),
+  stepNav: document.getElementById('step-nav'),
+  onScreen: function(id, idx) {
+    document.getElementById('progress-text').textContent = 'Step ' + (idx+1) + ' of 5';
+  }
+});
+</script>
+</body>
+</html>
