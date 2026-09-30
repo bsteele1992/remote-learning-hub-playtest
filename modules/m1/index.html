@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnose scale failure at ~1:124 — Large-Cohort Remote Design</title>
+<link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <a class="back-hub" href="../../index.html">← Module hub</a>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">M1</div>
+      <div>
+        <h1>Large-Cohort Remote Design</h1>
+        <p>Objective 1 · 8–12 min</p>
+      </div>
+    </div>
+    <div class="topbar-meta"><span id="progress-label">1 / 5</span></div>
+  </header>
+
+  <main id="main">
+    <section class="glass module-header">
+      <p class="eyebrow">M1 · Objective 1</p>
+      <h1>Diagnose scale failure at ~1:124</h1>
+      <p class="obj">Learn first. Then practice. Practice unlocks after you finish Teach and the Worked example.</p>
+      <div class="module-status">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span id="progress-text">Step 1 of 5</span>
+      </div>
+    </section>
+
+    <nav class="step-nav" id="step-nav" aria-label="Module steps">
+      <button type="button" class="nav-step" data-step="0">1 Hook</button>
+      <button type="button" class="nav-step" data-step="1">2 Teach</button>
+      <button type="button" class="nav-step" data-step="2">3 Model</button>
+      <button type="button" class="nav-step" data-step="3">4 Practice</button>
+      <button type="button" class="nav-step" data-step="4">5 Exit</button>
+    </nav>
+
+    <div id="hard-gate-alert" class="gate-msg" hidden role="alert"></div>
+    <div id="complete-banner" class="glass complete-banner" hidden>
+      <h3>Module complete</h3>
+      <p>Your practice answers are saved in this browser. Head back to the hub when you’re ready for the next module.</p>
+    </div>
+
+
+    <!-- S1 Hook -->
+    <section class="screen" id="s1">
+      <div class="glass panel">
+        <h2>Hook</h2>
+        <div class="scenario">
+          <span class="label">Picture this</span>
+          <p class="lead" style="margin:0">One instructor. 124 people online. The plan says “break into groups, then we’ll hear from a few.” You get thirty-plus breakout rooms. Two groups report. Everyone else checks out.</p>
+        </div>
+        <p><strong style="color:var(--text)">Quick prompt (not scored):</strong> What actually failed—the content, or the assumption that a classroom-sized plan still works at this size?</p>
+        <div class="field">
+          <label for="m1-hook">Your quick take (optional)</label>
+          <textarea id="m1-hook" data-persist="m1-hook" rows="3" placeholder="One or two sentences…"></textarea>
+        </div>
+        <div class="actions">
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to teach</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S2 Teach -->
+    <section class="screen" id="s2">
+      <div class="glass panel">
+        <h2>Teach — Why classroom patterns fail at ~1:124</h2>
+        <p class="lead">Imagine you have 124 people online and one instructor—no teaching assistants (that’s <strong style="color:var(--text)">zero-TA</strong>). The session falls apart. That usually isn’t because learners “won’t engage.” It’s because the plan assumed classroom ratios that don’t exist here. Treat “no TA help” as a hard design limit, not a staffing surprise. Plans that need a bench of graders or coaches don’t transfer.</p>
+
+        <div class="teach-section">
+          <h3>1. Breakouts, then “hear from a few”</h3>
+          <p>You send ~30 groups into rooms. You call on three. The other twenty-seven never show their work. There’s no shared wrap-up the whole room hears. Silent groups learn airtime is optional. You can’t tell whether most people actually applied the process.</p>
+          <div class="glass-soft callout"><p class="callout-title">What to do instead</p><p>Stop promising every-group oral reports. Get the whole cohort contributing in writing (shared docs, polls), then give one short whole-room wrap-up of themes—what we’ll call <strong style="color:var(--text)">broadcast synthesis</strong>.</p></div>
+        </div>
+
+        <div class="teach-section">
+          <h3>2. Multi-role live walkthrough in every room</h3>
+          <p>Every table must run all stakeholder roles live while you coach each room. One person cannot visit ~30 breakouts in a short window and still coach well. The bottleneck isn’t your content. It’s coaching bandwidth.</p>
+        </div>
+
+        <div class="teach-section">
+          <h3>3. Grade every product the same night</h3>
+          <p>Thirty group notes—or 124 individual notes—tonight. Do the math. That’s a <strong style="color:var(--text)">minutes-per-learner</strong> budget: how many minutes one instructor can honestly spend per person. Same-night private grading of everyone fails that budget. It’s a 1:1 bandwidth crash dressed up as a mid-session check (formative assessment—evidence used to adjust teaching, not final grading).</p>
+          <div class="glass-soft callout"><p class="callout-title">What to do instead</p><p>Budget minutes-per-learner first. Prefer sampling a subset and broadcasting themes, auto-score plus spot-check, or structured peer review—not private replies to everyone.</p></div>
+        </div>
+
+        <div class="teach-section">
+          <h3>4. “Reply to everyone” as teaching presence</h3>
+          <p>At this size, teaching presence isn’t personal replies to every chat line. It’s designing the system: clear protocols, roles, rubrics, examples, and whole-room theme notes. Reply-all presence collapses under volume.</p>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to worked example</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S3 Model -->
+    <section class="screen" id="s3">
+      <div class="glass panel">
+        <h2>Worked example — Diagnosing a weak plan</h2>
+        <p><strong style="color:var(--text)">Seed plan:</strong> 10 min lecture → ~30 groups of 4 for 15 min → “hear from a few” → instructor grades every group’s notes tonight.</p>
+
+        <div class="contrast">
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--good">Strong diagnosis</span>
+            <ul>
+              <li><strong>Report-out bandwidth:</strong> Sampling a few of ~30 leaves most people without accountability or a shared wrap-up.</li>
+              <li><strong>Visit fantasy:</strong> One instructor cannot coach ~30 rooms in 15 minutes with zero TA help.</li>
+              <li><strong>Minutes-per-learner:</strong> Grading all notes the same night is a 1:1 collapse.</li>
+            </ul>
+            <p style="margin-top:0.75rem;font-size:0.9rem"><strong style="color:var(--text)">What must change:</strong> Drop every-group oral sample. Design whole-cohort contribution plus synthesis. Redefine mid-session checks for sample / auto / peer inside a fixed timebox.</p>
+          </div>
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--weak">Weak contrast</span>
+            <p>“Learners should engage more” or “make cameras mandatory” blames motivation and keeps the same scale-breaking structure. That’s not a scale diagnosis.</p>
+          </div>
+        </div>
+
+        <div class="glass-soft callout callout--model">
+          <p class="callout-title">Here’s a strong diagnosis</p>
+          <p>Name the real break points—not “learners won’t engage.” Point to how people report out, how many minutes one instructor has, how heavy the grading load is tonight, and that you’re running with zero TAs (no teaching assistants).</p>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-to-practice data-next>Continue to practice</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S4 Practice -->
+    <section class="screen" id="s4">
+      <div class="glass panel">
+        <h2>Practice — Diagnose the transplanted plan</h2>
+        <div id="practice-lock" class="glass-soft callout callout--locked" hidden>
+          <p class="callout-title">Practice locked</p>
+          <p>Finish <strong style="color:var(--text)">Teach</strong> and the <strong style="color:var(--text)">Worked example</strong> first (hit Next on those screens). Practice stays blocked until both are done—so you diagnose with the tools, not guesswork.</p>
+        </div>
+
+        <div class="scenario">
+          <span class="label">Given plan</span>
+          <p style="margin:0">A classroom plan dropped into remote: breakouts plus sample report-outs, a multi-role process walkthrough seed, and same-night grading of group notes—for 124 learners and one instructor.</p>
+        </div>
+
+        <div class="glass-soft callout callout--criteria">
+          <p class="callout-title">What “good enough” looks like</p>
+          <ul>
+            <li>≥3 concrete scale-failure points named</li>
+            <li>Each point tied to report-out design, instructor minutes, grading load, or zero-TA (no teaching assistants)</li>
+            <li>Minutes-per-learner (or equivalent bandwidth note) present</li>
+            <li>Decision states what must change before redesign</li>
+            <li>Does not propose “try harder with the same pattern”</li>
+          </ul>
+        </div>
+
+        <div class="field">
+          <label for="m1-f1">Scale-failure points (≥3)</label>
+          <textarea id="m1-f1" data-persist="m1-f1" data-required-practice rows="5" placeholder="List at least three failure points, including ≥1 bandwidth / minutes-per-learner point…"></textarea>
+        </div>
+        <div class="field">
+          <label for="m1-f2">What must change before redesign (one paragraph)</label>
+          <textarea id="m1-f2" data-persist="m1-f2" data-required-practice rows="4" placeholder="State the redesign decision — not “engage harder”…"></textarea>
+        </div>
+        <div class="field">
+          <label for="m1-debrief">Optional debrief — Quote one failure point that names what broke at scale</label>
+          <textarea id="m1-debrief" data-persist="m1-debrief" data-debrief rows="2" placeholder="Paste one line from your answer…"></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to exit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- S5 Exit -->
+    <section class="screen" id="s5">
+      <div class="glass panel">
+        <h2>Exit</h2>
+        <p class="lead">You can now spot why a classroom pattern fails at ~1:124—by naming what broke at scale, not blaming engagement.</p>
+        <p><strong style="color:var(--text)">Next:</strong> M2 Align &amp; chunk for application at scale (works fine on its own).</p>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-complete-module>Mark module complete</button>
+          <a class="btn" href="../../index.html">Back to hub</a>
+        </div>
+        <p class="hint" style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-dim)">Complete unlocks when the required practice fields are filled (not empty).</p>
+      </div>
+    </section>
+
+
+  </main>
+  <p class="footer-note">Need an alternate format or time? Contact [placeholder]. · Design Package v1.3</p>
+</div>
+<script src="../../assets/js/app.js"></script>
+<script>
+LCApp.initShell({
+  moduleId: 'm1',
+  screens: ['s1','s2','s3','s4','s5'],
+  progressEl: document.getElementById('progress-label'),
+  fillEl: document.getElementById('progress-fill'),
+  stepNav: document.getElementById('step-nav'),
+  onScreen: function(id, idx) {
+    document.getElementById('progress-text').textContent = 'Step ' + (idx+1) + ' of 5';
+  }
+});
+</script>
+</body>
+</html>
