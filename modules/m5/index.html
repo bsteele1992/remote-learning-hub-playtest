@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design scalable summative / performance assessment — Large-Cohort Remote Design</title>
+<link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <a class="back-hub" href="../../index.html">← Module hub</a>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">M5</div>
+      <div>
+        <h1>Large-Cohort Remote Design</h1>
+        <p>Objective 5 · 10–15 min</p>
+      </div>
+    </div>
+    <div class="topbar-meta"><span id="progress-label">1 / 5</span></div>
+  </header>
+  <main id="main">
+    <section class="glass module-header">
+      <p class="eyebrow">M5 · Objective 5</p>
+      <h1>Design scalable summative / performance assessment</h1>
+      <p class="obj">Learn first. Then practice. Practice unlocks after you finish Teach and the Worked example.</p>
+      <div class="module-status">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span id="progress-text">Step 1 of 5</span>
+      </div>
+    </section>
+    <nav class="step-nav" id="step-nav" aria-label="Module steps">
+      <button type="button" class="nav-step" data-step="0">1 Hook</button>
+      <button type="button" class="nav-step" data-step="1">2 Teach</button>
+      <button type="button" class="nav-step" data-step="2">3 Model</button>
+      <button type="button" class="nav-step" data-step="3">4 Practice</button>
+      <button type="button" class="nav-step" data-step="4">5 Exit</button>
+    </nav>
+    <div id="hard-gate-alert" class="gate-msg" hidden role="alert"></div>
+    <div id="complete-banner" class="glass complete-banner" hidden>
+      <h3>Module complete</h3>
+      <p>Your practice answers are saved in this browser. Head back to the hub when you’re ready for the next module.</p>
+    </div>
+
+    <section class="screen" id="s1">
+      <div class="glass panel">
+        <h2>Hook</h2>
+        <div class="scenario">
+          <span class="label">Picture this</span>
+          <p class="lead" style="margin:0">The final grade hinges on a 20-item multiple-choice quiz about process definitions. The objective was “apply the process to a scenario.”</p>
+        </div>
+        <p><strong style="color:var(--text)">Quick prompt (not scored):</strong> What would real evidence look like—without grading 124 essays tonight?</p>
+        <div class="field"><label for="m5-hook">Your quick take (optional)</label><textarea id="m5-hook" data-persist="m5-hook" rows="3"></textarea></div>
+        <div class="actions"><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Continue to teach</button></div>
+      </div>
+    </section>
+
+    <section class="screen" id="s2">
+      <div class="glass panel">
+        <h2>Teach — End products that still scale</h2>
+        <div class="teach-section">
+          <h3>A. Authentic product + visible rubric</h3>
+          <p><strong style="color:var(--text)">Summative assessment</strong> is the end evidence for a grade or pass decision. Process/application objectives need products that show checklist performance, decisions, or stakeholder artifacts—not definition recall alone. Put the rubric where learners can see it before they work.</p>
+        </div>
+        <div class="teach-section">
+          <h3>B. Preferred workflows (why each scales)</h3>
+          <ul>
+            <li><strong>Calibrated peer review (CPR-like):</strong> write → practice scoring on high/mid/low examples → review peers → self-review; you arbitrate flagged or low-agreement cases. (CPR = calibrated peer review—peers score after learning the standard.)</li>
+            <li><strong>Group product + individual accountability:</strong> team artifact + role contribution + peer eval; you grade the product and spot-check individuals.</li>
+            <li><strong>Two-tier grading:</strong> light or peer layers first; you score a smaller high-value set yourself.</li>
+          </ul>
+        </div>
+        <div class="teach-section">
+          <h3>C. Don’t lead with auto essay scoring · always name a backup</h3>
+          <p><strong style="color:var(--text)">Automated essay scoring (AES)</strong>—software that grades writing—is <em>not</em> the first recommendation for novel process analysis. Always write a <strong style="color:var(--text)">tool contingency</strong>: if a CPR platform is available → CPR-like; else → two-tier / group+individual / sampling. Never leave the backup blank.</p>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to worked example</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s3">
+      <div class="glass panel">
+        <h2>Worked example — Quiz-only vs CPR-like</h2>
+        <div class="contrast">
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--good">CPR-like plan</span>
+            <p style="font-size:0.9rem">Learners submit a one-page process artifact scored on 4 criteria. They practice scoring on 3 examples (high/mid/low), then each reviews 3 peers; you only arbitrate the flagged set. Spread this over about 72 hours. Backup: if no CPR platform is available, switch to two-tier grading or sampling.</p>
+          </div>
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--weak">Weak</span>
+            <p>A 20-item definition quiz as the only end assessment when the objective is process application fails both “can they apply it?” and assessment design quality. No backup plan when a CPR platform might be unavailable → incomplete.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-to-practice data-next>Continue to practice</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s4">
+      <div class="glass panel">
+        <h2>Practice — Design summative / performance assessment</h2>
+        <div id="practice-lock" class="glass-soft callout callout--locked" hidden>
+          <p class="callout-title">Practice locked</p>
+          <p>Finish Teach and the Worked example first. Practice stays blocked until both are done—so your end evidence has a real scoring path and a backup.</p>
+        </div>
+        <div class="glass-soft callout callout--criteria">
+          <p class="callout-title">What “good enough” looks like</p>
+          <ul>
+            <li>Product matches application objective · Criteria/rubric visible</li>
+            <li>CPR-like, group+individual, two-tier, or sampling stated</li>
+            <li><strong>Tool contingency</strong> line present · Scoring bandwidth realistic with zero TA help</li>
+            <li>AES not first path · Not quiz-only for process/application</li>
+          </ul>
+        </div>
+        <div class="field">
+          <label for="m5-workflow">Scoring workflow</label>
+          <select id="m5-workflow" data-persist="m5-workflow" data-required-practice>
+            <option value="">Select one…</option>
+            <option value="cpr">CPR-like calibrated peer review</option>
+            <option value="group">Group product + individual accountability</option>
+            <option value="two-tier">Two-tier grading</option>
+            <option value="sampling">Sampling / arbitration set</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="m5-plan">Product, criteria, scoring workflow, staging</label>
+          <textarea id="m5-plan" data-persist="m5-plan" data-required-practice rows="7"></textarea>
+        </div>
+        <div class="field">
+          <label for="m5-contingency">Tool contingency line (required)</label>
+          <textarea id="m5-contingency" data-persist="m5-contingency" data-required-practice rows="2" placeholder="CPR available → CPR-like; else → …"></textarea>
+        </div>
+        <div class="field">
+          <label for="m5-debrief">Optional debrief — Quote your tool-contingency line</label>
+          <textarea id="m5-debrief" data-persist="m5-debrief" data-debrief rows="2"></textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to exit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s5">
+      <div class="glass panel">
+        <h2>Exit</h2>
+        <p class="lead">You can design end-of-section performance evidence at cohort scale.</p>
+        <p><strong style="color:var(--text)">Next:</strong> M6 Online alternatives to multi-stakeholder process sims.</p>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-complete-module>Mark module complete</button>
+          <a class="btn" href="../../index.html">Back to hub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <p class="footer-note">Need an alternate format or time? Contact [placeholder]. · Design Package v1.3</p>
+</div>
+<script src="../../assets/js/app.js"></script>
+<script>
+LCApp.initShell({
+  moduleId: 'm5',
+  screens: ['s1','s2','s3','s4','s5'],
+  progressEl: document.getElementById('progress-label'),
+  fillEl: document.getElementById('progress-fill'),
+  stepNav: document.getElementById('step-nav'),
+  onScreen: function(id, idx) {
+    document.getElementById('progress-text').textContent = 'Step ' + (idx+1) + ' of 5';
+  }
+});
+</script>
+</body>
+</html>
