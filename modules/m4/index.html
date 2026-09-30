@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design scalable formative assessment — Large-Cohort Remote Design</title>
+<link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <a class="back-hub" href="../../index.html">← Module hub</a>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">M4</div>
+      <div>
+        <h1>Large-Cohort Remote Design</h1>
+        <p>Objective 4 · 10–15 min</p>
+      </div>
+    </div>
+    <div class="topbar-meta"><span id="progress-label">1 / 5</span></div>
+  </header>
+  <main id="main">
+    <section class="glass module-header">
+      <p class="eyebrow">M4 · Objective 4</p>
+      <h1>Design scalable formative assessment</h1>
+      <p class="obj">Learn first. Then practice. Practice unlocks after you finish Teach and the Worked example.</p>
+      <div class="module-status">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span id="progress-text">Step 1 of 5</span>
+      </div>
+    </section>
+    <nav class="step-nav" id="step-nav" aria-label="Module steps">
+      <button type="button" class="nav-step" data-step="0">1 Hook</button>
+      <button type="button" class="nav-step" data-step="1">2 Teach</button>
+      <button type="button" class="nav-step" data-step="2">3 Model</button>
+      <button type="button" class="nav-step" data-step="3">4 Practice</button>
+      <button type="button" class="nav-step" data-step="4">5 Exit</button>
+    </nav>
+    <div id="hard-gate-alert" class="gate-msg" hidden role="alert"></div>
+    <div id="complete-banner" class="glass complete-banner" hidden>
+      <h3>Module complete</h3>
+      <p>Your practice answers are saved in this browser. Head back to the hub when you’re ready for the next module.</p>
+    </div>
+
+    <section class="screen" id="s1">
+      <div class="glass panel">
+        <h2>Hook</h2>
+        <div class="scenario">
+          <span class="label">Picture this</span>
+          <p class="lead" style="margin:0">The instructor plans to grade every chat response the same night—124 entries.</p>
+        </div>
+        <p><strong style="color:var(--text)">Quick prompt (not scored):</strong> What evidence do you actually need—and what can one instructor honestly review?</p>
+        <div class="field"><label for="m4-hook">Your quick take (optional)</label><textarea id="m4-hook" data-persist="m4-hook" rows="3"></textarea></div>
+        <div class="actions"><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Continue to teach</button></div>
+      </div>
+    </section>
+
+    <section class="screen" id="s2">
+      <div class="glass panel">
+        <h2>Teach — Mid-session checks that survive 1:124</h2>
+        <div class="teach-section">
+          <h3>A. Decision frame: minutes-per-learner first</h3>
+          <p><strong style="color:var(--text)">Formative assessment</strong> means evidence you use to adjust teaching mid-flight—not a tiny final exam. Before you pick a method, budget how many minutes one instructor can spend per learner (or per sample). That’s your minutes-per-learner limit again.</p>
+        </div>
+        <div class="teach-section">
+          <h3>B. Methods that work (what evidence + why it scales)</h3>
+          <ul>
+            <li><strong>Peer Instruction / response polls</strong> at process decision points — auto-tally; short discuss window when the room is mixed; you explain the pattern.</li>
+            <li><strong>Interrupted case</strong> — individual short answers before group dialogue.</li>
+            <li><strong>Structured worksheets / process templates</strong> — visible rows you can sample.</li>
+            <li><strong>Protocol peer feedback</strong> on drafts — peers carry the load; you arbitrate outliers.</li>
+            <li><strong>Auto-graded quizzes with elaborated feedback</strong> — good for prerequisites; not the only check that people can apply the process.</li>
+          </ul>
+        </div>
+        <div class="teach-section">
+          <h3>C. Whole-room themes vs reply-all</h3>
+          <p>Prefer whole-cohort theme notes from a sample over private replies to every submission. That’s broadcast synthesis again. Reply-all presence collapses under volume.</p>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to worked example</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s3">
+      <div class="glass panel">
+        <h2>Worked example — Weak vs strong formative</h2>
+        <div class="contrast">
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--good">Strong</span>
+            <p style="font-size:0.9rem">Peer Instruction on a Gate-2 decision fork: everyone votes alone, then if the room is mixed (~30–70% correct) they discuss and re-vote. Next, sample 8 of 124 template rows in 10 minutes and share 3 whole-room theme notes. Minutes-per-learner are budgeted—this is not 124 private replies.</p>
+          </div>
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--weak">Weak</span>
+            <p>“Review every chat message” / “grade all breakout notes tonight” — scale executability fails. One person cannot do that honestly.</p>
+          </div>
+        </div>
+        <div class="glass-soft callout callout--model">
+          <p class="callout-title">Strong Peer Instruction sketch</p>
+          <p>Poll prompt: “At Gate 2, impact review is incomplete but the sponsor wants to skip. Best next move?” Give A/B/C/D choices. Run the Peer Instruction loop (solo vote → short discuss if mixed → re-vote), then give your 90-second explanation.</p>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-to-practice data-next>Continue to practice</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s4">
+      <div class="glass panel">
+        <h2>Practice — Design a formative plan</h2>
+        <div id="practice-lock" class="glass-soft callout callout--locked" hidden>
+          <p class="callout-title">Practice locked</p>
+          <p>Finish Teach and the Worked example first. Practice stays blocked until both are done—so your check matches the minutes you actually have.</p>
+        </div>
+        <div class="glass-soft callout callout--criteria">
+          <p class="callout-title">What “good enough” looks like</p>
+          <ul>
+            <li>Evidence tied to application objective · Method from the grounded formative menu</li>
+            <li>Executable at 100+ with zero TA help · Sampling / auto / peer-protocol / timebox stated</li>
+            <li>Minutes-per-learner or equivalent budget noted · Not awareness-only quiz as the only check</li>
+          </ul>
+        </div>
+        <div class="field">
+          <label for="m4-method">Formative method</label>
+          <select id="m4-method" data-persist="m4-method" data-required-practice>
+            <option value="">Select one…</option>
+            <option value="pi">Peer Instruction / response poll</option>
+            <option value="interrupted">Interrupted case short answers</option>
+            <option value="template">Structured worksheet / template</option>
+            <option value="peer">Protocol peer feedback</option>
+            <option value="auto">Auto-graded quiz + elaborated feedback</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="m4-plan">Formative plan (evidence, collection, sampling/timebox, instructor action, minutes-per-learner)</label>
+          <textarea id="m4-plan" data-persist="m4-plan" data-required-practice rows="8"></textarea>
+        </div>
+        <div class="field">
+          <label for="m4-debrief">Optional debrief — Quote your minutes-per-learner or sampling rule</label>
+          <textarea id="m4-debrief" data-persist="m4-debrief" data-debrief rows="2"></textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to exit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s5">
+      <div class="glass panel">
+        <h2>Exit</h2>
+        <p class="lead">You can design mid-session checks that survive 1:124.</p>
+        <p><strong style="color:var(--text)">Next:</strong> M5 Design scalable summative / performance assessment (end evidence that still scales).</p>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-complete-module>Mark module complete</button>
+          <a class="btn" href="../../index.html">Back to hub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <p class="footer-note">Need an alternate format or time? Contact [placeholder]. · Design Package v1.3</p>
+</div>
+<script src="../../assets/js/app.js"></script>
+<script>
+LCApp.initShell({
+  moduleId: 'm4',
+  screens: ['s1','s2','s3','s4','s5'],
+  progressEl: document.getElementById('progress-label'),
+  fillEl: document.getElementById('progress-fill'),
+  stepNav: document.getElementById('step-nav'),
+  onScreen: function(id, idx) {
+    document.getElementById('progress-text').textContent = 'Step ' + (idx+1) + ' of 5';
+  }
+});
+</script>
+</body>
+</html>
