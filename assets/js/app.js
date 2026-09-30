@@ -259,9 +259,34 @@
       }
     }
 
-    /* Bare next (not gated) */
+    /* Bare next (not gated) — F-04: Hook Continue shows visible save confirm when text present */
     document.querySelectorAll('[data-next]:not([data-gate-next]):not([data-to-practice])').forEach(btn => {
-      btn.addEventListener('click', () => go(idx + 1));
+      btn.addEventListener('click', () => {
+        if (btn.dataset.hookLeaving === '1') return;
+        const active = document.querySelector('.screen.active');
+        const hookTa = active && active.querySelector('textarea[data-persist$="-hook"]');
+        if (hookTa) {
+          const key = hookTa.getAttribute('data-persist');
+          const trimmed = (hookTa.value || '').trim();
+          const field = hookTa.closest('.field');
+          const statusEl = field && field.querySelector('.hook-save-status');
+          if (trimmed && key) {
+            state.answers = state.answers || {};
+            state.answers[key] = hookTa.value;
+            setModule(moduleId, { answers: state.answers });
+            if (statusEl) statusEl.textContent = 'Saved on this device.';
+            btn.dataset.hookLeaving = '1';
+            /* Brief pause so confirmation is visible before leaving Hook */
+            const target = idx + 1;
+            window.setTimeout(() => {
+              delete btn.dataset.hookLeaving;
+              go(target);
+            }, 450);
+            return;
+          }
+        }
+        go(idx + 1);
+      });
     });
     document.querySelectorAll('[data-prev]').forEach(btn => {
       btn.addEventListener('click', () => go(idx - 1));
@@ -325,6 +350,63 @@
       };
       field.addEventListener('input', persist);
       field.addEventListener('change', persist);
+    });
+
+    /* F-04 (B): visible Save note + confirmation for optional Hook free-text (M1–M6) */
+    const HOOK_SAVED_MSG = 'Saved on this device.';
+    const HOOK_EMPTY_MSG = 'Nothing to save — that’s fine; this prompt is optional.';
+    document.querySelectorAll('textarea[data-persist$="-hook"]').forEach(ta => {
+      const wrap = ta.closest('.field') || ta.parentElement;
+      if (!wrap) return;
+      const key = ta.getAttribute('data-persist');
+
+      if (!wrap.querySelector('.hook-save-hint')) {
+        const label = wrap.querySelector('label');
+        const hint = document.createElement('span');
+        hint.className = 'hint hook-save-hint';
+        hint.textContent = 'Optional — use Save note so you see confirmation before Continue.';
+        if (label) label.insertAdjacentElement('afterend', hint);
+        else wrap.insertBefore(hint, ta);
+      }
+
+      let saveBtn = wrap.querySelector('[data-hook-save]');
+      if (!saveBtn) {
+        saveBtn = document.createElement('button');
+        saveBtn.type = 'button';
+        saveBtn.className = 'btn btn-ghost';
+        saveBtn.setAttribute('data-hook-save', '');
+        saveBtn.textContent = 'Save note';
+        ta.insertAdjacentElement('afterend', saveBtn);
+      }
+
+      let statusEl = wrap.querySelector('.hook-save-status');
+      if (!statusEl) {
+        statusEl = document.createElement('p');
+        statusEl.className = 'hint hook-save-status';
+        statusEl.setAttribute('role', 'status');
+        statusEl.setAttribute('aria-live', 'polite');
+        saveBtn.insertAdjacentElement('afterend', statusEl);
+      }
+
+      const forcePersist = () => {
+        if (!key) return;
+        state.answers = state.answers || {};
+        state.answers[key] = ta.value;
+        setModule(moduleId, { answers: state.answers });
+      };
+
+      saveBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const trimmed = (ta.value || '').trim();
+        forcePersist();
+        statusEl.textContent = trimmed ? HOOK_SAVED_MSG : HOOK_EMPTY_MSG;
+      });
+
+      ta.addEventListener('blur', () => {
+        if (!(ta.value || '').trim()) return;
+        forcePersist();
+        statusEl.textContent = HOOK_SAVED_MSG;
+      });
     });
 
     /* Persist checkboxes */

@@ -509,6 +509,9 @@ body {
   color: var(--text-dim);
   font-weight: 400;
 }
+.field .hook-save-hint { margin-bottom: 0.35rem; }
+.field [data-hook-save] { margin-top: 0.5rem; }
+.field .hook-save-status { margin-top: 0.4rem; min-height: 1.2em; }
 .field textarea,
 .field input[type="text"],
 .field select {
