@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Align &amp; chunk for application at scale — Large-Cohort Remote Design</title>
+<link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <a class="back-hub" href="../../index.html">← Module hub</a>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">M2</div>
+      <div>
+        <h1>Large-Cohort Remote Design</h1>
+        <p>Objective 2 · 8–12 min</p>
+      </div>
+    </div>
+    <div class="topbar-meta"><span id="progress-label">1 / 5</span></div>
+  </header>
+
+  <main id="main">
+    <section class="glass module-header">
+      <p class="eyebrow">M2 · Objective 2</p>
+      <h1>Align &amp; chunk for application at scale</h1>
+      <p class="obj">Learn first. Then practice. Practice unlocks after you finish Teach and the Worked example.</p>
+      <div class="module-status">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span id="progress-text">Step 1 of 5</span>
+      </div>
+    </section>
+
+    <nav class="step-nav" id="step-nav" aria-label="Module steps">
+      <button type="button" class="nav-step" data-step="0">1 Hook</button>
+      <button type="button" class="nav-step" data-step="1">2 Teach</button>
+      <button type="button" class="nav-step" data-step="2">3 Model</button>
+      <button type="button" class="nav-step" data-step="3">4 Practice</button>
+      <button type="button" class="nav-step" data-step="4">5 Exit</button>
+    </nav>
+
+    <div id="hard-gate-alert" class="gate-msg" hidden role="alert"></div>
+    <div id="complete-banner" class="glass complete-banner" hidden>
+      <h3>Module complete</h3>
+      <p>Your practice answers are saved in this browser. Head back to the hub when you’re ready for the next module.</p>
+    </div>
+
+
+    <section class="screen" id="s1">
+      <div class="glass panel">
+        <h2>Hook</h2>
+        <div class="scenario">
+          <span class="label">Picture this</span>
+          <p class="lead" style="margin:0">The objective says “Understand the change-gate approval process.” The session is 45 minutes of slides.</p>
+        </div>
+        <p><strong style="color:var(--text)">Quick prompt (not scored):</strong> What would “application” look like here—and could one instructor actually see it with 124 people?</p>
+        <div class="field">
+          <label for="m2-hook">Your quick take (optional)</label>
+          <textarea id="m2-hook" data-persist="m2-hook" rows="3"></textarea>
+        </div>
+        <div class="actions"><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Continue to teach</button></div>
+      </div>
+    </section>
+
+    <section class="screen" id="s2">
+      <div class="glass panel">
+        <h2>Teach — Align, then chunk for one-instructor runtime</h2>
+        <p class="lead">Words like “understand” and “know”—call them <strong style="color:var(--text)">awareness verbs</strong>—plus a lecture-only stack hide whether anyone can actually use the process. At 100+, one instructor has nothing observable to sample. Fix the objective first. Then cut the session into short pieces with a real practice beat in each.</p>
+
+        <div class="teach-section">
+          <h3>Alignment chain (in this order)</h3>
+          <ol>
+            <li><strong>Measurable application objective</strong> — something you can see: complete a checklist, decide a fork, produce a one-page artifact. Not “recall the definition” alone.</li>
+            <li><strong>Activity practice moment</strong> — learners commit, decide, or make something you can sample.</li>
+            <li><strong>How you’ll know at scale</strong> — poll, template row, self-score sample, whole-room theme notes—not grading every essay tonight.</li>
+          </ol>
+        </div>
+
+        <div class="teach-section">
+          <h3>Chunking for one-instructor runtime</h3>
+          <p>Keep each segment short enough to teach. Put <strong style="color:var(--text)">one generative practice</strong> (learners produce or decide something new) in each chunk. Short segments with a clear learner action beat a long slide stack that ends with “any questions?”</p>
+          <div class="glass-soft callout"><p class="callout-title">Directions that work</p><p>Participant directions must state purpose, timing, roles/output, how 100+ people participate, and a help path—not “discuss, then we’ll share.”</p></div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to worked example</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s3">
+      <div class="glass panel">
+        <h2>Worked example — Objective + 3-segment outline</h2>
+        <div class="contrast">
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--good">Strong — application objective</span>
+            <p style="font-size:0.9rem">Given a short change-request scenario, the learner will complete a 5-step process checklist for one case and submit a one-page process artifact that a peer can score against a 4-bullet rubric.</p>
+          </div>
+          <div class="glass-soft contrast-card">
+            <span class="tag tag--weak">Weak</span>
+            <p>“Understand the change-gate approval process” plus Lecture / Breakout / Any questions? Learners never practice the process, and the directions never say who does what—so both application demand and directions clarity fail.</p>
+          </div>
+        </div>
+        <table class="chunk-table" aria-label="Strong three-segment outline">
+          <thead><tr><th>Seg</th><th>Time</th><th>Learner does</th><th>Practice / check</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>0–6</td><td>Read scenario; mark missing step</td><td>Poll (auto-tally)</td></tr>
+            <tr><td>2</td><td>6–16</td><td>Role pairs draft missing step in shared template</td><td>Instructor samples 5 rows</td></tr>
+            <tr><td>3</td><td>16–25</td><td>Finalize one-page artifact; self-score</td><td>Upload + spot-check sample</td></tr>
+          </tbody>
+        </table>
+        <div class="glass-soft callout callout--model">
+          <p class="callout-title">Strong directions (Segment 2)</p>
+          <p><strong style="color:var(--text)">Purpose:</strong> Draft the missing process step for your role. <strong style="color:var(--text)">Timing:</strong> 10 minutes. <strong style="color:var(--text)">Roles:</strong> even roster number = Requestor; odd = Approver. <strong style="color:var(--text)">Output:</strong> one completed template row (not a spoken report). <strong style="color:var(--text)">How 100+ people participate:</strong> everyone types—we will not hear from every pair. <strong style="color:var(--text)">Help:</strong> post in the Help thread with your roster number.</p>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-to-practice data-next>Continue to practice</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s4">
+      <div class="glass panel">
+        <h2>Practice — Rewrite &amp; chunk</h2>
+        <div id="practice-lock" class="glass-soft callout callout--locked" hidden>
+          <p class="callout-title">Practice locked</p>
+          <p>Finish Teach and the Worked example first. Practice stays blocked until both are done—so you rewrite with the tools, not guesswork.</p>
+        </div>
+        <div class="glass-soft callout callout--criteria">
+          <p class="callout-title">What “good enough” looks like</p>
+          <ul>
+            <li>Objective states observable application performance</li>
+            <li>Each segment has a learner action · ≥1 generative practice moment</li>
+            <li>Chunks fit one-instructor runtime at 100+</li>
+            <li>Participant directions for ≥1 segment: purpose, timing, roles/output, participation-at-scale, help path</li>
+          </ul>
+        </div>
+        <div class="field">
+          <label for="m2-obj">Rewritten measurable application objective</label>
+          <textarea id="m2-obj" data-persist="m2-obj" data-required-practice rows="3" placeholder="Rewrite “Understand the change-gate / approval process”…"></textarea>
+        </div>
+        <div class="field">
+          <label for="m2-chunks">3-segment remote outline (time + what learners do + practice moment)</label>
+          <textarea id="m2-chunks" data-persist="m2-chunks" data-required-practice rows="6"></textarea>
+        </div>
+        <div class="field">
+          <label for="m2-dir">Participant directions for one segment</label>
+          <textarea id="m2-dir" data-persist="m2-dir" data-required-practice rows="4"></textarea>
+        </div>
+        <div class="field">
+          <label for="m2-debrief">Optional debrief — Quote the observable performance verb from your objective</label>
+          <textarea id="m2-debrief" data-persist="m2-debrief" data-debrief rows="2"></textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-next>Continue to exit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="s5">
+      <div class="glass panel">
+        <h2>Exit</h2>
+        <p class="lead">You can align and chunk an application activity for large-cohort remote.</p>
+        <p><strong style="color:var(--text)">Next:</strong> M3 Design large-cohort activity patterns (recommended next).</p>
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" data-prev>Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-complete-module>Mark module complete</button>
+          <a class="btn" href="../../index.html">Back to hub</a>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <p class="footer-note">Need an alternate format or time? Contact [placeholder]. · Design Package v1.3</p>
+</div>
+<script src="../../assets/js/app.js"></script>
+<script>
+LCApp.initShell({
+  moduleId: 'm2',
+  screens: ['s1','s2','s3','s4','s5'],
+  progressEl: document.getElementById('progress-label'),
+  fillEl: document.getElementById('progress-fill'),
+  stepNav: document.getElementById('step-nav'),
+  onScreen: function(id, idx) {
+    document.getElementById('progress-text').textContent = 'Step ' + (idx+1) + ' of 5';
+  }
+});
+</script>
+</body>
+</html>
